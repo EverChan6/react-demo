@@ -1,4 +1,6 @@
-# webpack5-vue3
+# react-demo
+config webpack customly to make a react demo project.
+
 
 ## description
 

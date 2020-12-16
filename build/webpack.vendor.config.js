@@ -4,7 +4,10 @@ const webpack = require('webpack')
 module.exports = {
   // 要打包的第三方模块的数组
   entry: {
-    vendor: ['react'] // TODO：应该换成react和antd
+    react: [
+      'react',
+      'react-dom'
+    ]
   },
   output: {
     path: path.resolve(__dirname, '../static/js'), // 打包后文件输出的位置
@@ -13,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DllPlugin({
-      path: path.join(__dirname, '../[name]-manifest.json'),
+      path: path.join(__dirname, '../static/js', '[name]-manifest.json'),
       context: __dirname,
       name: '[name]_[fullhash]'
     })

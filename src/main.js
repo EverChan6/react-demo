@@ -1,21 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './assets/index.css'
-// import App from './app.js'
-
-class App extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return (
-            <div>hello world</div>
-        )
-    }
-}
+import App from './app.js'
+import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
     <App />,
     document.getElementById('root')
 )
+
+reportWebVitals()

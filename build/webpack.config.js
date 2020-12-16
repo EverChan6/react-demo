@@ -132,16 +132,16 @@ module.exports = {
       ],
       threadPool: happyThreadPool // 共享进程池
     }),
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: require('../vendor-manifest.json')
-    }),
-    new CopyWebpackPlugin({ // 拷贝生成的文件到dist目录 这样每次不必手动去cv
-      patterns:
-      [{
-        from: 'static',
-        to: 'static'
-      }]
-    })
+    // new webpack.DllReferencePlugin({
+    //   context: __dirname,
+    //   manifest: require('../static/js/react-manifest.json')
+    // }),
+    // new CopyWebpackPlugin({ // 拷贝生成的文件到dist目录 这样每次不必手动去cv
+    //   patterns:
+    //   [{
+    //     from: path.resolve(__dirname, '../static/js'),
+    //     to: path.resolve(__dirname, 'dist')
+    //   }]
+    // })
   ]
 }

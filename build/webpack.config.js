@@ -63,9 +63,11 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'img/[name].[contenthash:8].[ext]'
+                  name: 'img/[name].[contenthash:8].[ext]',
+                  esModule: false
                 }
-              }
+              },
+              esModule: false
             }
           }
         ],
